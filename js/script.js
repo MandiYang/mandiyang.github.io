@@ -1,17 +1,17 @@
 let currentDate = new Date();
-const mbtn=document.getElementById("memberLink");
-const nbtn=document.getElementById("next_btn");
-const pbtn=document.getElementById("prev_btn");
-const submitbtn=document.getElementById("submitBtn");
+const mBtn=document.getElementById("memberLink");
+const nBtn=document.getElementById("nextBtn");
+const pBtn=document.getElementById("prevBtn");
+const subBtn=document.getElementById("submitBtn");
 // Lägger till EventListeners istället för onclick för att få bättre betyg
-if (mbtn) { // För att knappen finns inte på alla sidor där script.js laddas vilket gör så att jag måste lägga till if sats så att om mbtn är null körs inte koden nedan.
-    mbtn.addEventListener("click", navMemberLink);
+if (mBtn) { // För att knappen finns inte på alla sidor där script.js laddas vilket gör så att jag måste lägga till if sats så att om mbtn är null körs inte koden nedan.
+    mBtn.addEventListener("click", navMemberLink);
 }
-if (submitbtn){
-    submitbtn.addEventListener("click", handleSubmit);
+if (subBtn){
+    subBtn.addEventListener("click", handleSubmit);
 }
-nbtn.addEventListener("click", nextMonth);
-pbtn.addEventListener("click", prevMonth);
+nBtn.addEventListener("click", nextMonth);
+pBtn.addEventListener("click", prevMonth);
 
 //Den funktion skapad med hjälp av AI för att jag inte kan allting i javascript och behöver på ett dynamiskt vis kunna visa dagar , månad och placeringen av dem
 function renderCalendar() {
