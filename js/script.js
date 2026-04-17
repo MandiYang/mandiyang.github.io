@@ -1,6 +1,19 @@
 let currentDate = new Date();
+const mbtn=document.getElementById("memberLink");
+const nbtn=document.getElementById("next_btn");
+const pbtn=document.getElementById("prev_btn");
+const submitbtn=document.getElementById("submitBtn");
+// Lägger till EventListeners istället för onclick för att få bättre betyg
+if (mbtn) { // För att knappen finns inte på alla sidor där script.js laddas vilket gör så att jag måste lägga till if sats så att om mbtn är null körs inte koden nedan.
+    mbtn.addEventListener("click", navMemberLink);
+}
+if (submitbtn){
+    submitbtn.addEventListener("click", handleSubmit);
+}
+nbtn.addEventListener("click", nextMonth);
+pbtn.addEventListener("click", prevMonth);
 
-//Den funktion skapad med hjälp av AI för att jag inte kan allting i javascript
+//Den funktion skapad med hjälp av AI för att jag inte kan allting i javascript och behöver på ett dynamiskt vis kunna visa dagar , månad och placeringen av dem
 function renderCalendar() {
     const datesContainer = document.getElementById("dates");
     const monthYear = document.getElementById("monthYear");
@@ -49,7 +62,7 @@ function prevMonth() {
 }
 
 function nextMonth() {
-    currentDate.setDate(1)
+    currentDate.setDate(1);
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
 }
@@ -60,9 +73,7 @@ function selectDate(day) {
     let month = currentDate.getMonth() + 1;
 
     window.open(
-        "https://schack.se/kalender/lista/?tribe-bar-date=" 
-        + year + "-" + month + "-" + day,
-        "_blank"
+        "https://schack.se/kalender/lista/?tribe-bar-date=" + year + "-" + month + "-" + day, "_blank"
     );
 }
 

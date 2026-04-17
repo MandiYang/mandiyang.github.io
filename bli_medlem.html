@@ -10,7 +10,7 @@
   <div class="bli_medlem">
     <header>
       <div class="HomePageTitle">
-        <img src="img/chesslogo.png" alt="chesslogo" id="chesslogo">
+        <img src="img/chesslogo.png" alt="schackloggan" id="chesslogo">
         <h1>Välkommen till MindMasters schackklubb</h1>
       </div>
       <p><i>- För både nybörjare och erfarna spelare</i></p>
@@ -28,7 +28,7 @@
           <div class="info-card">
             <div>
               <h3>Klubblokal</h3>
-              <img src="img/klubblokal.jpg" alt="Klubblokalen">
+              <img src="img/klubblokal.jpg" alt="Klubblokalen hos vår klubb">
               <p>Göteborgsvägen 3</p>
             </div>
           </div>
@@ -86,7 +86,7 @@
             <label for="villkor">Jag godkänner <a href="#" class="form-link">klubbreglerna</a> och bekräftar att uppgifterna är korrekta. *</label>
             <input type="checkbox" id="villkor">
           </div>
-          <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+          <button id="submitBtn">
             Skicka Medlemsansökan ✉️
           </button>
         </div>
@@ -96,11 +96,10 @@
       <h3>Tävlingskalender</h3>
       <div class="calendar">
         <div class="calendar-header">
-            <button onclick="prevMonth()">◀</button>
+            <button id="prev_btn">◀</button>
             <h2 id="monthYear"></h2>
-            <button onclick="nextMonth()">▶</button>
+            <button id="next_btn">▶</button>
         </div>
-
         <div class="days">
             <div>Mån</div>
             <div>Tis</div>
@@ -110,7 +109,6 @@
             <div>Lör</div>
             <div>Sön</div>
         </div>
-
         <div class="dates" id="dates"></div>
       </div>
     </aside>

@@ -383,7 +383,7 @@ input:focus, select:focus, textarea:focus {
     text-decoration: underline;
 }
 
-.submit-btn {
+#submitBtn {
     width: 100%;
     padding: 12px;
     background: #14532d;
@@ -395,7 +395,7 @@ input:focus, select:focus, textarea:focus {
     transition: 0.2s;
 }
 
-.submit-btn:hover {
+#submitBtn:hover {
     background: #1f7a45;
 }
 
