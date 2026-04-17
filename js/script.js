@@ -94,5 +94,5 @@ function handleSubmit() {
 }
 
 function navMemberLink() {
-    window.location.href = "bli_medlem.html"; //Redirigerar till bli_medlem.html sidan
+    window.location.href = "blimedlem.html"; //Redirigerar till bli_medlem.html sidan
 }
