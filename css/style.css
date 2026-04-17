@@ -36,7 +36,7 @@ body {
   display: grid;
   grid-template-areas:
       "header header"
-      "section topnav"
+      "section searchbar"
       "section aside"
       "footer footer";
   grid-template-columns: 5fr 3fr;
@@ -165,8 +165,8 @@ figure {
 }
 /*generic css classes*/
 
-.topnav{
-    grid-area: topnav;
+.searchbar{
+    grid-area: searchbar;
     margin-top: 25px;
     max-width: 450px;
     height: 40px;
@@ -440,7 +440,7 @@ input:focus, select:focus, textarea:focus {
     .schackresurser{
         grid-template-areas:
             "header"
-            "topnav"
+            "searchbar"
             "section"
             "aside"
             "footer";
@@ -459,7 +459,7 @@ input:focus, select:focus, textarea:focus {
         width: calc(100% - 40px);
 
     }
-    .topnav{
+    .searchbar{
         margin-top: 0px;
         width: 85%;
     }
