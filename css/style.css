@@ -453,7 +453,7 @@ input:focus, select:focus, textarea:focus {
         gap:10px
     }
     header {
-        background-image: url(/img/mobile_bg.jpg);
+        background-image: url(/img/mobilebg.jpg);
     }
     header h1, header p{
         background-color: black;
