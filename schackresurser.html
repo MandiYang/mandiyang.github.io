@@ -10,22 +10,81 @@
   <div class="schackresurser">
     <header>
       <div class="HomePageTitle">
-        <img src="img/schacklogo.png" alt="chesslogo">
+        <img src="img/chesslogo.png" alt="chesslogo" id="chesslogo">
         <h1>Välkommen till MindMasters schackklubb</h1>
       </div>
       <p><i>- För både nybörjare och erfarna spelare</i></p>
       <nav>
         <a href="index.html">Start</a>
-        <a href="schackresurser.html">Schackresurser</a>
-        <a href="tavlingar.html">Tävlingar</a>
+        <a id="highlight" href="schackresurser.html">Schackresurser</a>
+        <a href="bli_medlem.html">Bli medlem</a>
         <a href="bloggar.html">Blogginlägg</a>
       </nav>
     </header>
-    <main>
-    <h2>Schackresurser för att bli en schackmästare</h2>
-    </main>
+    <nav class="topnav">
+      <input type="text" placeholder="Sök för en schackbok...">
+    </nav>
+    <section class="resources">
+      <div class="title">
+        <h2>Schackresurser för att bli en schackmästare</h2>
+        <h3>Böcker</h3>
+      </div>
+      <div class="book-flexbox">
+        <div class="book-card">
+          <figure>
+            <img src="img/bok1.jpg" alt="Fallen King">
+            <figcaption><b>Fallen King</b></figcaption>
+          </figure>
+          <p class="price">349 kr</p>
+          <button>Köp</button>
+        </div>
+
+        <div class="book-card">
+          <figure>
+            <img src="img/bok2.jpg" alt="Sicilian 2.b3">
+            <figcaption><b>Sicilian 2.b3 opening repertoire</b></figcaption>
+          </figure>
+          <p class="price">199 kr</p>
+          <button>Köp</button>
+        </div>
+
+        <div class="book-card">
+          <figure>
+            <img src="img/bok3.jpg" alt="Woodpecker method 2">
+            <figcaption><b>Woodpecker method 2</b></figcaption>
+          </figure>
+          <p class="price">369 kr</p>
+          <button>Köp</button>
+        </div>
+
+        <div class="book-card">
+          <figure>
+            <img src="img/bok4.jpg" alt="Official chess rulebook">
+            <figcaption><b>Official chess rulebook</b></figcaption>
+          </figure>
+          <p class="price">229 kr</p>
+          <button>Köp</button>
+        </div> 
+        <div class="book-card">
+          <figure>
+            <img src="img/bok5.jpg" alt="Chess and corporate stretegy">
+            <figcaption><b>Chess and corporate stretegy</b></figcaption>
+          </figure>
+          <p class="price">129 kr</p>
+          <button>Köp</button>
+        </div>
+        <div class="book-card">
+          <figure>
+            <img src="img/bok6.png" alt="Positional Play">
+            <figcaption><b>Positional Play</b></figcaption>
+          </figure>
+          <p class="price">279 kr</p>
+          <button>Köp</button>
+        </div> 
+      </div>
+    </section>
     <aside>
-      <h3>Kalender</h3>
+      <h3>Tävlingskalender</h3>
       <div class="calendar">
         <div class="calendar-header">
             <button onclick="prevMonth()">◀</button>
@@ -44,9 +103,11 @@
         </div>
 
         <div class="dates" id="dates"></div>
+      </div>
     </aside>
     <footer>
       <p>Kontakt: info@mindmasters.se</p>
+      <p>Tel: 0701234567</p>
     </footer>
   </div>
   <script src="js/script.js"></script>

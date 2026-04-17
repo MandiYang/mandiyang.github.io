@@ -1,7 +1,13 @@
+@keyframes myAnimation { /*https://www.w3schools.com/css/css3_animations.asp*/
+  from {color: black;}
+  to {color: white;}
+}
+
 body {
-    margin: 0;
+    margin: 0; /*Ingen vit område bredvid själva sidan*/
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f4f6f5;
+    font-size:large;
 }
 
 /* GRID LAYOUT */
@@ -12,9 +18,8 @@ body {
       "main aside"
       "section section"
       "footer footer";
-  grid-template-columns: 5fr 2fr;
-  grid-template-rows: 2fr 5fr 1fr 200px;
-  height: 260vh;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 400px 2.2fr 1fr 110px;
 }
 
 .bloggar{
@@ -23,31 +28,36 @@ body {
       "header header"
       "main aside"
       "footer footer";
-  grid-template-columns: 5fr 2fr;
-  grid-template-rows: 2fr 5fr 200px;
-  height: 300vh;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 400px 1fr 110px;
 }
 
 .schackresurser{
   display: grid;
   grid-template-areas:
       "header header"
-      "main aside"
+      "section topnav"
+      "section aside"
       "footer footer";
-  grid-template-columns: 5fr 2fr;
-  grid-template-rows: 2fr 5fr 200px;
-  height: 300vh;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 400px 80px 1fr 110px;
 }
 
-.tavlingar{
+.bli_medlem{
   display: grid;
   grid-template-areas:
       "header header"
-      "main aside"
+      "section aside"
       "footer footer";
-  grid-template-columns: 5fr 2fr;
-  grid-template-rows: 2fr 5fr 200px;
-  height: 300vh;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 400px 1fr 110px;
+}
+
+.hemsida,
+.bloggar,
+.schackresurser,
+.bli_medlem {
+    min-height: 150vh; /*https://www.w3schools.com/cssref/pr_dim_min-height.php*/
 }
 
 /*css areas*/
@@ -60,11 +70,11 @@ nav {
     background: lightblue;
 }
 
-main button{
-  background: lightblue;
+button{
+  background: #add8e6;
   color: black;
   font-size: 25px;
-  padding: 30px 50px;
+  padding: 15px 25px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -78,11 +88,12 @@ nav a {
 }
 
 nav a:hover {
-  background: blue;
+  background: white;
+  transition: 0.5s;
 }
 
-.bloggar i{
-  text-align: right;display: block;font-size:0.7em
+.bloggar main i{
+  text-align: right;display: block;font-size:0.9em
 }
 
 
@@ -95,29 +106,72 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation-name: myAnimation;
+  animation-duration: 4s;
 }
+
+header h1, header p {
+    margin-left: 20px;
+}
+
 aside{
   grid-area: aside;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
 main{
   grid-area: main;
+  padding: 20px;
 }
+main img{
+    width: auto;
+    height: 350px;
+    border-radius: 10px;
+}
+
 section{
   grid-area:section;
+  padding: 20px;
 }
+
 footer{
   grid-area: footer;
+  padding: 20px;
+  background-color: lightblue;
 }
+
+figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+	
 
 /*html tagger*/
-img{
-  width: 180px;
+#chesslogo{
+  width: 130px;
+  border: 2px solid;
+  border-color: white;
+  transform: rotate(45deg);
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
+/*generic css id*/
+#highlight{
+    background-color: white;
+}
 /*generic css classes*/
+
+.topnav{
+    grid-area: topnav;
+    margin-top: 25px;
+    max-width: 450px;
+    height: 40px;
+    background-color: #f4f6f5;
+}
 
 .bread{
   border: 1px solid #AAA;
@@ -126,13 +180,66 @@ img{
 }
 
 .avatar{
-  height: 200px;
-  width: auto;
-  border: 10px solid black;
+  height: auto;
+  width: 300px;
+  border: 10px groove black; /*https://www.w3schools.com/css/css_border.asp*/
   border-radius: 5px
 }
 
-/*css Calender*/
+.price {
+    font-weight: bold; /*Tydlig prislapp*/
+    font-size: 18px;
+}
+
+.resources { /*Använde grid för att book-cards inte ska hamna bredvid titlen så jag skapade en div för allt som inte är book-cards i schackresurser*/
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "book";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 25px;
+    padding: 20px 30px;
+}
+
+.book-flexbox{
+    grid-area: book;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.title{
+    grid-area: title;
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.book-card {
+    background: white;
+    border-radius: 10px;
+    overflow: scroll; /*Ifall content blir för mycket https://www.w3schools.com/css/css_overflow.asp*/
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /*https://www.w3schools.com/css/css3_shadows_box.asp*/
+    transition: 0.3s;
+    padding: 10px;
+    flex: 0 0 260px; /*https://www.w3schools.com/CSS/css3_flexbox_items.asp*/
+    max-height: 480px;
+    flex-direction: column; /*https://www.w3schools.com/cssref/css3_pr_flex-direction.php*/
+    align-items: center;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+/*css Kalender*/
 .calendar {
     max-width: 300px;
     background: white;
@@ -180,3 +287,224 @@ img{
     background: #ddd;
 }
 
+/* Anmälning */
+.anmalan-grid {
+    display: grid;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.anmalan-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /*https://www.w3schools.com/css/css3_shadows_box.asp*/
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+}
+
+.info-card img {
+    width: auto;
+    height: 450px;
+    border-radius: 8px;
+    margin: 10px 0;
+    filter: saturate(3) contrast(150%); /*https://www.w3schools.com/cssref/css3_pr_filter.php*/
+
+}
+
+/* Formulär */
+
+#villkor{
+    transform: scale(1.4);
+}
+
+.anmalan-form-wrap {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.group-label {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #14532d;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form-link {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #14532d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: #1f7a45;
+}
+
+.form-success {
+    display: none;
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .hemsida{
+        grid-template-areas:
+            "header"
+            "main"
+            "section"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bloggar{
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bli_medlem{
+        grid-template-areas:
+            "header"
+            "section"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .schackresurser{
+        grid-template-areas:
+            "header"
+            "topnav"
+            "section"
+            "aside"
+            "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+    }
+
+    .hemsida, .bloggar, .schackresurser, .bli_medlem{
+        gap:10px
+    }
+    header {
+        background-image: url(/img/mobile_bg.jpg);
+    }
+    header h1, header p{
+        background-color: black;
+        width: calc(100% - 40px);
+
+    }
+    .topnav{
+        margin-top: 0px;
+        width: 85%;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    #chesslogo {
+        max-width: 30%;
+    }
+
+    main img {
+        max-width: 95%;
+        height: auto;
+    }
+
+    section{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .calendar{
+        max-width: 90%;
+    }
+
+    .info-card img {
+        max-width: 95%;
+        height: auto;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .book-card {
+        flex: 0 1 calc(50% - 30px); /*För att passa i 2 kolumner och mobilers skärmstorlek är mer varierade.*/
+        max-width: calc(50% - 30px);
+    }
+    .book-card img {
+        height: auto;
+        width: 200%;
+    }
+
+    aside {
+        margin-bottom: 10px;
+    }
+}

@@ -10,36 +10,44 @@
   <div class="hemsida">
     <header>
       <div class="HomePageTitle">
-        <img src="img/schacklogo.png" alt="chesslogo">
+        <img src="img/chesslogo.png" alt="chesslogo" id="chesslogo">
         <h1>Välkommen till MindMasters schackklubb</h1>
       </div>
       <p><i>- För både nybörjare och erfarna spelare</i></p>
       <nav>
-        <a href="index.html">Start</a>
+        <a id="highlight" href="index.html">Start</a>
         <a href="schackresurser.html">Schackresurser</a>
-        <a href="tavlingar.html">Tävlingar</a>
+        <a href="bli_medlem.html">Bli medlem</a>
         <a href="bloggar.html">Blogginlägg</a>
       </nav>
     </header>
     <main>
     <h2>Om oss</h2>
-    <p>MindMasters grundades 2020 med målet att skapa en inkluderande och inspirerande miljö för alla som är intresserade av schack. Vi välkomnar spelare i alla åldrar och på alla nivåer – från nybörjare som vill lära sig grunderna till erfarna spelare som vill utveckla sin strategi. Hos oss handlar schack inte bara om att vinna, utan också om att tänka kreativt, utmana sig själv och ha roligt tillsammans med andra. Vi strävar efter att bygga en stark gemenskap där alla känner sig välkomna och motiverade att utvecklas. Vi träffas varje vecka för träning, turneringar och socialt spel. Våra träffar är en plats där du kan förbättra dina färdigheter, få tips från andra spelare och njuta av spelet i en avslappnad atmosfär.</p>
+    <p>MindMasters grundades år 2020 med målet att skapa en inkluderande och inspirerande miljö för alla som är intresserade av schack. Vi välkomnar spelare i alla åldrar och på alla <i>nivåer</i> – från nybörjare som vill lära sig grunderna till erfarna spelare som vill utveckla sin strategi. Hos oss handlar schack inte bara om att vinna, utan också om att tänka kreativt, utmana sig själv och ha roligt tillsammans med andra. Vi strävar efter att bygga en stark gemenskap där alla känner sig välkomna och motiverade att utvecklas. Vi träffas varje vecka för träning, turneringar och socialt spel. Våra träffar är en plats där du kan förbättra dina färdigheter, få tips från andra spelare och njuta av spelet i en avslappnad atmosfär.</p>
     <h2>Vad vi erbjuder</h2>
     <ul>
-      <li><b>Träningar och spel varje vecka</b></li>
-      <p>Regelbundna träffar där du kan spela, analysera partier och utveckla dina färdigheter tillsammans med andra.</p>
-      <li><b>Klubbturneringar</b></li>
-      <p>Interna turneringar där du får chansen att testa dina kunskaper i en tävlingsmiljö och följa din utveckling över tid.</p>
-      <li><b>Nybörjarkurser</b></li>
-      <p>Perfekt för dig som är ny inom schack och vill lära dig grunderna på ett enkelt och pedagogiskt sätt.</p>
-      <li><b>Gemenskap och utveckling</b></li>
-      <p>En social miljö där du lär känna andra med samma intresse och utvecklas både som spelare och strategi.</p>
+      <li>
+        <b>Träningar och spel varje vecka</b><br>
+        Regelbundna träffar där du kan spela, analysera partier och utveckla dina färdigheter tillsammans med andra.
+      </li>
+      <li>
+        <b>Klubbturneringar</b><br>
+        Interna turneringar där du får chansen att testa dina kunskaper i en tävlingsmiljö och följa din utveckling över tid.
+      </li>
+      <li>
+        <b>Nybörjarkurser</b><br>
+        Perfekt för dig som är ny inom schack och vill lära dig grunderna på ett enkelt och pedagogiskt sätt.
+      </li>
+      <li>
+        <b>Gemenskap och utveckling</b><br>
+        En social miljö där du lär känna andra med samma intresse och utvecklas både som spelare och strategi.
+      </li>
     </ul>
-    <h2>Gå med i våran klubb idag</h2>
-    <button>Bli klubbmedlem</button>
+    <h2>Gå med i våran klubb idag!</h2>
+    <button onclick="navMemberLink()">Bli klubbmedlem</button>
     </main>
     <aside>
-      <h3>Kalender</h3>
+      <h3>Tävlingskalender</h3>
       <div class="calendar">
         <div class="calendar-header">
             <button onclick="prevMonth()">◀</button>
@@ -62,13 +70,13 @@
     </aside>
     <section>
       <h2>Vår styrelse</h2>
-      <img class="avatar" src="img/avatar.png" alt="">
-      <img class="avatar" src="img/avatar.png" alt="">
-      <img class="avatar" src="img/avatar.png" alt="">
-      <img class="avatar" src="img/avatar.png" alt="">
+      <img class="avatar" src="img/avatar.jpg" alt="avatar">
+      <img class="avatar" src="img/avatar.jpg" alt="avatar">
+      <img class="avatar" src="img/avatar.jpg" alt="avatar">
     </section>
     <footer>
       <p>Kontakt: info@mindmasters.se</p>
+      <p>Tel: 0701234567</p>
     </footer>
   </div>
   <script src="js/script.js"></script>

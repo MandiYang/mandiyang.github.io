@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MindMasters</title>
+</head>
+<body>
+  <div class="bli_medlem">
+    <header>
+      <div class="HomePageTitle">
+        <img src="img/chesslogo.png" alt="chesslogo" id="chesslogo">
+        <h1>Välkommen till MindMasters schackklubb</h1>
+      </div>
+      <p><i>- För både nybörjare och erfarna spelare</i></p>
+      <nav>
+        <a href="index.html">Start</a>
+        <a href="schackresurser.html">Schackresurser</a>
+        <a id="highlight" href="bli_medlem.html">Bli medlem</a>
+        <a href="bloggar.html">Blogginlägg</a>
+      </nav>
+    </header>
+    <section>
+      <h2>Bli medlem hos vår klubb</h2>
+      <div class="anmalan-grid">
+        <div class="anmalan-info">
+          <div class="info-card">
+            <div>
+              <h3>Klubblokal</h3>
+              <img src="img/klubblokal.jpg" alt="Klubblokalen">
+              <p>Göteborgsvägen 3</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div>
+              <h3>Medlemsavgift</h3>
+              <p>350kr / år</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div>
+              <h3>Terminstart</h3>
+              <p>20:e Augusti och 8:e Januari. Juniorergruppen spelar hela året runt förutom Sommarlov, Vinterlov och andra storhelger. Veteranerna spelar i stort sett året runt förutom storhelger.</p>
+            </div>
+          </div>
+        </div>
+        <div class="anmalan-form-wrap"> <!--https://www.w3schools.com/html/html_form_input_types.asp-->
+          <h2 class="group-label">Personliga Uppgifter</h2>
+          <div class="form-group">
+            <label for="fornamn">Förnamn *</label>
+            <input type="text" id="fornamn" placeholder="Ex. Gunnar">
+          </div>
+          <div class="form-group">
+            <label for="efternamn">Efternamn *</label>
+            <input type="text" id="efternamn" placeholder="Ex. Gunnarson">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="aldersklass">Åldersklass *</label>
+              <select id="aldersklass"> <!--https://www.w3schools.com/tags/tag_select.asp-->
+                <option value="">Välj klass</option>
+                <option>Junior(20 år eller yngre) </option>
+                <option>Vuxen(Mellan 21 och 60 år) </option>
+                <option>Senior(Över 60 år) </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-post *</label>
+            <input type="email" id="email" placeholder="gunnar@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefon *</label>
+            <input type="tel" id="telefon" placeholder="070-000 00 00">
+          </div>
+
+          <div class="form-group">
+            <label for="ovrigt">Övrigt / Frågor</label>
+            <textarea id="ovrigt" rows="3" placeholder="Eventuella frågor eller önskemål..."></textarea>
+          </div>
+
+          <div class="form-check">
+            <label for="villkor">Jag godkänner <a href="#" class="form-link">klubbreglerna</a> och bekräftar att uppgifterna är korrekta. *</label>
+            <input type="checkbox" id="villkor">
+          </div>
+          <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+            Skicka Medlemsansökan ✉️
+          </button>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <h3>Tävlingskalender</h3>
+      <div class="calendar">
+        <div class="calendar-header">
+            <button onclick="prevMonth()">◀</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="nextMonth()">▶</button>
+        </div>
+
+        <div class="days">
+            <div>Mån</div>
+            <div>Tis</div>
+            <div>Ons</div>
+            <div>Tor</div>
+            <div>Fre</div>
+            <div>Lör</div>
+            <div>Sön</div>
+        </div>
+
+        <div class="dates" id="dates"></div>
+      </div>
+    </aside>
+    <footer>
+      <p>Kontakt: info@mindmasters.se</p>
+      <p>Tel: 0701234567</p>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

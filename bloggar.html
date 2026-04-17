@@ -10,15 +10,15 @@
   <div class="bloggar">
     <header>
       <div class="HomePageTitle">
-        <img src="img/schacklogo.png" alt="chesslogo">
+        <img src="img/chesslogo.png" alt="chesslogo" id="chesslogo">
         <h1>Välkommen till MindMasters schackklubb</h1>
       </div>
-      <p>För både nybörjare och erfarna spelare</p>
+      <p><i>- För både nybörjare och erfarna spelare</i></p>
       <nav>
         <a href="index.html">Start</a>
         <a href="schackresurser.html">Schackresurser</a>
-        <a href="tavlingar.html">Tävlingar</a>
-        <a href="bloggar.html">Blogginlägg</a>
+        <a href="bli_medlem.html">Bli medlem</a>
+        <a id="highlight" href="bloggar.html">Blogginlägg</a>
       </nav>
     </header>
     <main>
@@ -26,21 +26,24 @@
       <p class="bread">
 				<b>Juluppehåll</b><br><br>
 				Juniorgrupperna tar julupphehåll. Anslutning för äldre gruppen är den 12:e December och den yngre gruppen har avslutning den 15:e. Vi sätter igång igen vecka 3.
+        Trevlig Jul!
+        <img src="img/jul.jpg" alt="jul">
 				<i>Mandi Yang 2025-12-12</i>
 			</p>
       <p class="bread">
-				<b>Juluppehåll</b><br><br>
-				Juniorgrupperna tar julupphehåll. Anslutning för äldre gruppen är den 12:e December och den yngre gruppen har avslutning den 15:e. Vi sätter igång igen vecka 3.
-				<i>Mandi Yang 2025-12-12</i>
+				<b>Tävlingar</b><br><br>
+				GSF (Göteborgs schackförbund) har passat på att göra klart lite inbjudningar. Vi noterar att Snabb-DM kommer spelas på en lördag med vad som verkar bli rätt snabb snabbschack (om den benämningen inte förvirrar för mycket). Samt också att lagblixt-DM körs dagen efter. Vi får se hur många lag Manhem ställer upp med där, men det är viktigt att de som vill spela meddelar lagtävlingsansvarig genom mail till info@mindmasters.se
+Kanske mest glädjande av allt är att Göteborg Open återuppstår och nu spelas på ett format med Bergergrupper indelade efter ranking d.v.s. att man i teorin och oftast även i praktiken får jämnsvårt motstånd tävlingen igenom.
+				<i>Mandi Yang 2025-5-24</i>
 			</p>
       <p class="bread">
-				<b>Juluppehåll</b><br><br>
-				Juniorgrupperna tar julupphehåll. Anslutning för äldre gruppen är den 12:e December och den yngre gruppen har avslutning den 15:e. Vi sätter igång igen vecka 3.
-				<i>Mandi Yang 2025-12-12</i>
+				<b>Påskturnering</b><br><br>
+        I Norrköping går Schack 08:s påskturnering. En mycket klassisk tävling. Ett antal från MindMasters är med.
+				<i>Mandi Yang 2024-3-27</i>
 			</p>
     </main>
     <aside>
-      <h3>Kalender</h3>
+      <h3>Tävlingskalender</h3>
       <div class="calendar">
         <div class="calendar-header">
             <button onclick="prevMonth()">◀</button>
@@ -59,9 +62,11 @@
         </div>
 
         <div class="dates" id="dates"></div>
+      </div>
     </aside>
     <footer>
       <p>Kontakt: info@mindmasters.se</p>
+      <p>Tel: 0701234567</p>
     </footer>
   </div>
   <script src="js/script.js"></script>
