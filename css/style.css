@@ -19,7 +19,7 @@ body {
       "section section"
       "footer footer";
   grid-template-columns: 5fr 3fr;
-  grid-template-rows: 400px 2.2fr 1fr 110px;
+  grid-template-rows: 400px auto 1fr 110px;
 }
 
 .bloggar{
@@ -43,7 +43,7 @@ body {
   grid-template-rows: 400px 80px 1fr 110px;
 }
 
-.bli_medlem{
+.blimedlem{
   display: grid;
   grid-template-areas:
       "header header"
@@ -56,7 +56,7 @@ body {
 .hemsida,
 .bloggar,
 .schackresurser,
-.bli_medlem {
+.blimedlem {
     min-height: 150vh; /*https://www.w3schools.com/cssref/pr_dim_min-height.php*/
 }
 
@@ -100,7 +100,7 @@ nav a:hover {
 header{
   grid-area: header;
   background-image: url(/img/schackbild.jpg);
-  background-position: 40% 130%;
+  background-position: 40% 100%;
   background-size: cover;
   color: white;
   display: flex;
@@ -121,14 +121,20 @@ aside{
   align-items: center;
   margin: 20px;
 }
+
 main{
   grid-area: main;
   padding: 20px;
 }
+
 main img{
-    width: auto;
-    height: 350px;
+    width: 70%;
+    height: auto;
     border-radius: 10px;
+}
+
+main p, header p{
+    font-size: larger;
 }
 
 section{
@@ -165,24 +171,28 @@ figure {
 }
 /*generic css classes*/
 
+.textcenter{
+    text-align: center;
+}
+
 .searchbar{
     grid-area: searchbar;
     margin-top: 25px;
-    max-width: 450px;
+    max-width: 90%;
     height: 40px;
     background-color: #f4f6f5;
 }
 
 .bread{
-  border: 1px solid #AAA;
+  border: 1px solid black;
   padding: 1em; 
   border-radius: 1em
 }
 
 .avatar{
   height: auto;
-  width: 300px;
-  border: 10px groove black; /*https://www.w3schools.com/css/css_border.asp*/
+  width: 30%;
+  border: 14px groove black; /*https://www.w3schools.com/css/css_border.asp*/
   border-radius: 5px
 }
 
@@ -210,7 +220,7 @@ figure {
     justify-content: center;
 }
 
-.title{
+#resourcetitle{
     grid-area: title;
 }
 
@@ -240,7 +250,8 @@ figure {
 
 /*css Kalender*/
 .calendar {
-    max-width: 300px;
+    width: 70%;
+    height: auto;
     background: white;
     padding: 15px;
     border-radius: 10px;
@@ -289,6 +300,7 @@ figure {
 /* Anmälning */
 .anmalan-grid {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 1100px;
     margin: 40px auto;
@@ -317,8 +329,8 @@ figure {
 }
 
 .info-card img {
-    width: auto;
-    height: 450px;
+    width: 75%;
+    height: auto;
     border-radius: 8px;
     margin: 10px 0;
     filter: saturate(3) contrast(150%); /*https://www.w3schools.com/cssref/css3_pr_filter.php*/
@@ -427,7 +439,7 @@ input:focus, select:focus, textarea:focus {
         grid-template-rows: auto;
     }
 
-    .bli_medlem{
+    .blimedlem{
         grid-template-areas:
             "header"
             "section"
@@ -448,7 +460,7 @@ input:focus, select:focus, textarea:focus {
             grid-template-rows: auto;
     }
 
-    .hemsida, .bloggar, .schackresurser, .bli_medlem{
+    .hemsida, .bloggar, .schackresurser, .blimedlem{
         gap:10px
     }
     header {
@@ -472,7 +484,7 @@ input:focus, select:focus, textarea:focus {
     }
 
     main img {
-        max-width: 95%;
+        width: 95%;
         height: auto;
     }
 
@@ -481,12 +493,16 @@ input:focus, select:focus, textarea:focus {
         padding-bottom: 0px;
     }
     
+    .avatar{
+        width: 90%;
+    }
+    
     .calendar{
-        max-width: 90%;
+        width: 90%;
     }
 
     .info-card img {
-        max-width: 95%;
+        width: 100%;
         height: auto;
     }
 
