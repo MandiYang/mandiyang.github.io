@@ -191,7 +191,8 @@ figure {
   height: auto;
   width: 30%;
   border: 14px groove black; /*https://www.w3schools.com/css/css_border.asp*/
-  border-radius: 5px
+  border-radius: 5px;
+  margin:3px
 }
 
 .price {
