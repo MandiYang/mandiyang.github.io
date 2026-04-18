@@ -343,6 +343,7 @@ figure {
 .info-card img {
     width: 75%;
     height: auto;
+    border: 6px double black;
     border-radius: 8px;
     margin: 10px 0;
     filter: saturate(3) contrast(150%); /*https://www.w3schools.com/cssref/css3_pr_filter.php*/
@@ -514,7 +515,7 @@ input:focus, select:focus, textarea:focus {
     }
 
     .info-card img {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
 
