@@ -220,7 +220,16 @@ figure {
 
 #resourcetitle{
     grid-area: title;
-    font-size: 1.6rem;
+}
+
+#resourcetitle h3{
+    font-size: 26px;
+    text-decoration-thickness: 5px;
+}
+
+#resourcetitle h2{
+    text-decoration-thickness: 5px;
+    text-decoration:underline;
 }
 
 .book-card img {
