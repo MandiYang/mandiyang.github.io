@@ -134,7 +134,7 @@ main img{
 }
 
 main p, header p{
-    font-size: larger;
+    font-size: 18px;
 }
 
 section{
@@ -153,9 +153,12 @@ figure {
 	flex-direction: column;
 	align-items: center;
 }
-	
 
-/*html tagger*/
+/*generic css id*/
+#highlight{
+    background-color: white;
+}
+
 #chesslogo{
   width: 130px;
   border: 2px solid;
@@ -163,11 +166,6 @@ figure {
   transform: rotate(45deg);
   margin-left: 40px;
   margin-top: 40px;
-}
-
-/*generic css id*/
-#highlight{
-    background-color: white;
 }
 /*generic css classes*/
 
@@ -222,6 +220,7 @@ figure {
 
 #resourcetitle{
     grid-area: title;
+    font-size: 1.6rem;
 }
 
 .book-card img {
